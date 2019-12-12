@@ -43,10 +43,17 @@ public class Program {
 				list.add(new Company(name, anualIncome, numberOfEmployees));
 			}
 		}
-		
+		double sum =0.0;
 		System.out.println();
 		System.out.println("TAXES PAID:");
+		for(TaxPayer tx : list) {
+			double tax = tx.tax();
+			System.out.println(tx.getName() + ": $" + String.format("%.2f", tax));
+			sum  += tax;
+		}
+		
 		System.out.println();
+		System.out.print("TOTAL TAXES: $ " + String.format("%.2f", sum));
 		
 		sc.close();
 	}

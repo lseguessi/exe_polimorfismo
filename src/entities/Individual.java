@@ -38,5 +38,4 @@ public class Individual extends TaxPayer{
 			}
 		}
 	}
-
 }
